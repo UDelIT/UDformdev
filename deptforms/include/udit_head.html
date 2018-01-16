@@ -1,0 +1,219 @@
+  <meta charset="utf-8">
+  <!--<link rel='dns-prefetch' href='//www.udel.edu/'>-->
+  <link rel='dns-prefetch' href='//fonts.googleapis.com'>
+  <!-- https://github.com/mdn/html-examples
+  <link rel="preload" href="style.css" as="style">
+  <link rel="preload" href="main.js" as="script">
+  <link rel="preload" href="fonts.eot" as="font" type="application/vnd.ms-fontobject" crossorigin="anonymous">
+    <link rel="preload" href="fonts.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts.woff" as="font" type="font/woff" crossorigin="anonymous">
+    <link rel="preload" href="fonts.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+    <link rel="preload" href="fonts.svg" as="font" type="image/svg+xml" crossorigin="anonymous">
+    <link rel="preload" href="sintel-short.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="bg-image-narrow.png" as="image" media="(max-width: 600px)">
+    <link rel="preload" href="bg-image-wide.png" as="image" media="(min-width: 601px)">
+    <script>
+      var mediaQueryList = window.matchMedia("(max-width: 600px)");
+      var header = document.querySelector('header');
+
+      if(mediaQueryList.matches) {
+        header.style.backgroundImage = 'url(bg-image-narrow.png)';
+      } else {
+        header.style.backgroundImage = 'url(bg-image-wide.png)';
+      }
+    </script>
+-->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="INDEX,NOFOLLOW">
+  <!--#if  expr="${IS_IE}" -->
+  <meta name="msapplication-tap-highlight" content="no">
+   <meta name="msapplication-config" content="/deptforms/browserconfig.xml">
+   <meta name="theme-color" content="#FFFFFF">
+   <!--#endif -->
+
+<!-- <meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@site_account">
+<meta name="twitter:creator" content="@individual_account">
+<meta name="twitter:url" content="https://www.example.com/path/to/page.html">
+<meta name="twitter:title" content="">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://www.example.com/path/to/image.jpg">
+ -->
+  <link rel="manifest" href="/deptforms/manifest.json">
+
+  <!--#if  expr="${IS_MOBILE} =~{ 'iPhone', 'iPad' }" -->
+  <link rel="apple-touch-icon" href="/deptforms/img/touch/apple-touch-icon.png">
+  <link rel="mask-icon" href="/deptforms/img/touch/ud-safari-pinned-tab-icon.svg" color="#216BAE">
+  <link rel="apple-touch-icon" href="/deptforms/img/touch/apple-touch-icon.png">
+  <!--#else -->
+  <link rel="shortcut icon" href="/deptforms/img/touch/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/deptforms/img/touch/favicon-32x32.png">
+  <!--#endif -->
+  <!--#if  expr="${IS_MOBILE}" -->
+  <link href="/deptforms/css/udit_mobile.css" type="text/css" media="screen" rel="stylesheet">
+  <!--#endif -->
+  <link href="/deptforms/css/udit_style.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_normalize.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_branding.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_flexbox.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_navigation.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_bulma.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="/deptforms/css/udit_materializecss.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" type="text/css" media="screen" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css" type="text/css" media="screen" rel="stylesheet">
+  <!-- <link href="/deptforms/css/udit_forms.css" type="text/css" media="screen" rel="stylesheet"> -->
+  <link href="//fonts.googleapis.com/css?family=Yantramanav:400,700" rel="stylesheet" type="text/css">
+  <script>
+/**
+ * https://stackoverflow.com/questions/37721782/what-are-passive-event-listeners
+ * @param  {[type]} e)                              {                                console.log(e.defaultPrevented);                   e.preventDefault();       console.log(e.defaultPrevented);    } [description]
+ * @param  {[type]} Modernizr.passiveeventlisteners ?             {passive: true} : false                            [description]
+ * @return {[type]}                                 [description]
+ */
+// addEventListener(document, "touchstart", function(e) {
+//     console.log(e.defaultPrevented);  // will be false
+//     e.preventDefault();   // does nothing since the listener is passive
+//     console.log(e.defaultPrevented);  // still false
+//   }, Modernizr.passiveeventlisteners ? {passive: true} : false);
+
+var documentModeSupported = false;
+
+try {
+  var options = Object.defineProperty({}, "documentmode", {
+    get: function() {
+      documentModeSupported = true;
+      var head = document.head
+     , link = document.createElement('script')
+     link.type = 'text/javascript'
+     link.rel = 'stylesheet'
+     link.href = '"https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js" defer async'
+     head.appendChild( link )
+      //cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.3/es6-shim.min.js
+    }
+  });
+
+  window.addEventListener("test", null, options);
+} catch(err) {}
+
+//someElement.addEventListener("mouseup", handleMouseUp, documentModeSupported
+//                               ? { documentmode: true } : false);
+/**
+  * DETECT iOS VERSION
+  *
+  * @see https://gist.github.com/rafaelrinaldi/5873671
+  * window.MSStream used because Windows Phone can mimic Android and iOS
+  *
+  * @return {[type]} [description]
+  */
+ function iOSVersion() {
+  if(window.MSStream){
+    // There is some iOS in Windows Phone...
+    // https://msdn.microsoft.com/en-us/library/hh869301(v=vs.85).aspx
+    return false;
+  }
+  var match = (navigator.appVersion).match(/OS (\d+)_(\d+)_?(\d+)?/),
+      version;
+
+  if (match !== undefined && match !== null) {
+    version = [
+      parseInt(match[1], 10),
+      parseInt(match[2], 10),
+      parseInt(match[3] || 0, 10)
+    ];
+    return parseFloat(version.join('.'));
+  }
+
+  return false;
+}
+ /**
+   * JAVASCRIPT FEATURE DETECTION I
+   * Checks for IE11 and Edge browsers
+   * @return   mixed
+ */
+ (function detectIE() {
+   var isIE = /*@cc_on!@*/false || !!document.documentMode;
+   var isEdge = !isIE && !!window.StyleMedia;
+   if ( ( isIE ) || ( isEdge ) ) {
+     var head = document.head
+     , link = document.createElement('link')
+     link.type = 'text/css'
+     link.rel = 'stylesheet'
+     link.href = '/deptforms/css/ie.css'
+     head.appendChild( link )
+   }
+   else
+      // other browser
+      return false;
+ })();
+
+ /**
+   * JAVASCRIPT FEATURE DETECTION II
+   * Checks for DeviceOrientation and DeviceMotion support (Mobile browsers)
+   * @return   mixed|null        Load mobile CSS if TRUE
+   * @link https://github.com/micku7zu/vanilla-tilt.js/issues/21
+ */
+function detectGyro() {
+  //Check for support for DeviceOrientation event
+  if(window.DeviceOrientationEvent) {
+    window.addEventListener('deviceorientation', function(event) {
+            var alpha = event.alpha;
+            var beta = event.beta;
+            var gamma = event.gamma;
+
+            if(alpha!=null || beta!=null || gamma!=null){
+              console.log('orientation supported');
+            } else {
+              console.log('look at me bitch');
+            }
+          }, false);
+  }
+
+  // Check for support for DeviceMotion events
+  if(window.DeviceMotionEvent) {
+  window.addEventListener('devicemotion', function(event) {
+            var x = event.accelerationIncludingGravity.x;
+            var y = event.accelerationIncludingGravity.y;
+            var z = event.accelerationIncludingGravity.z;
+            var r = event.rotationRate;
+
+            if(r!=null)
+            console.log('motion supported');
+          });
+  }
+}
+
+ /**
+   * JAVASCRIPT FEATURE DETECTION II
+   * Checks for DeviceOrientation and DeviceMotion support (Mobile browsers)
+   * @return   mixed|null        Load mobile CSS if TRUE
+   * @link https://github.com/micku7zu/vanilla-tilt.js/issues/21
+ */
+function detectRetina() {
+  var divElement = document.querySelector("#dpiExample");
+
+  var query = "(-webkit-min-device-pixel-ratio: 2), (min-device-pixel-ratio: 2), (min-resolution: 192dpi)";
+
+  if (window.devicePixelRatio(query).matches) {
+    divElement.innerText = "High-DPI / Retina!";
+  } else {
+    divElement.innerText = "NOT High DPI / Retina!";
+  }
+ }
+// window.addEventListener("devicemotion", function(event){
+// if(event.rotationRate.alpha || event.rotationRate.beta || event.rotationRate.gamma)
+//   gyroPresent = true;
+// });
+
+/**
+ * https://www.html5rocks.com/en/tutorials/speed/script-loading/
+ */
+// !function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",[
+//   "//other-domain.com/1.js",
+//   "2.js"
+// ])
+</script>
+<!--#if  expr="${IS_MOBILE} =~{ 'iPhone', 'iPad' }" -->
+<script type="text/javascript" src="/js/manifest-ployfill.js"></script>
+<!--#endif -->
+
+

@@ -1,0 +1,1477 @@
+/**
+* @BULMA CSS
+*
+* Bulma.io CSS styles derived from bulma v 0.6.1
+*
+* This file loads on all devices and platforms.
+*
+* @version      1.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @license      MIT License
+*/
+/*-------------------------------------------------------------------
+
+-------------------------------------------------------------------*/
+.field:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+.bsa {
+  padding: 2rem;
+}
+.section {
+  background-color: #fff;
+  padding: 40px 20px
+}
+
+@media screen and (min-width:980px) {
+    .section.is-medium {
+        padding: 120px 20px
+    }
+    .section.is-large {
+        padding: 240px 20px
+    }
+}
+.hero {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hero.is-info {
+  background-color: #002663;
+  color: #fff;
+}
+
+.hero.is-info a:not(.button):not(.dropdown-item):not(.tag),
+.hero.is-info strong {
+  color: inherit;
+}
+
+.hero.is-info .title {
+  color: #fff;
+}
+
+.hero.is-info .subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero.is-info .subtitle a:not(.button),
+.hero.is-info .subtitle strong {
+  color: #fff;
+}
+
+@media screen and (max-width: 1023px) {
+  .hero.is-info .navbar-menu {
+    background-color: #002663;
+  }
+}
+
+.hero.is-info .navbar-item,
+.hero.is-info .navbar-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero.is-info a.navbar-item:hover, .hero.is-info a.navbar-item.is-active,
+.hero.is-info .navbar-link:hover,
+.hero.is-info .navbar-link.is-active {
+  background-color: #118fe4;
+  color: #fff;
+}
+
+.hero.is-info .tabs a {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.hero.is-info .tabs a:hover {
+  opacity: 1;
+}
+
+.hero.is-info .tabs li.is-active a {
+  opacity: 1;
+}
+
+.hero.is-info .tabs.is-boxed a, .hero.is-info .tabs.is-toggle a {
+  color: #fff;
+}
+
+.hero.is-info .tabs.is-boxed a:hover, .hero.is-info .tabs.is-toggle a:hover {
+  background-color: rgba(10, 10, 10, 0.1);
+}
+
+.hero.is-info .tabs.is-boxed li.is-active a, .hero.is-info .tabs.is-boxed li.is-active a:hover, .hero.is-info .tabs.is-toggle li.is-active a, .hero.is-info .tabs.is-toggle li.is-active a:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #002663;
+}
+
+.hero.is-info.is-bold {
+  background-image: linear-gradient(141deg, #04a6d7 0%, #002663 71%, #3287f5 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .hero.is-info.is-bold .navbar-menu {
+    background-image: linear-gradient(141deg, #04a6d7 0%, #002663 71%, #3287f5 100%);
+  }
+}
+
+.section {
+  padding: calc(1rem + ((1vw - 2px) * 0.625));
+  -webkit-transition: padding .12s ease-in-out;
+  transition: padding .12s ease-in-out;
+}
+.container {
+  margin: 0 auto;
+  position: relative;
+}
+.navbar > .container {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 3.25rem;
+  width: 100%;
+}
+/* @media screen and (min-width:980px) {
+    .container {
+        margin: 0 auto;
+        max-width: 960px
+    }
+    .container.is-fluid {
+        margin: 0 20px;
+        max-width: none
+    }
+} */
+/* @media screen and (min-width: 1024px) {
+  .container {
+    max-width: 960px;
+    width: 960px;
+  }
+  .container.is-fluid {
+    margin-left: 32px;
+    margin-right: 32px;
+    max-width: none;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .container {
+    max-width: 1152px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1407px) {
+  .container {
+    max-width: 1344px;
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1216px) {
+  .container {
+    max-width: 1152px;
+    width: 1152px;
+  }
+}
+@media screen and (min-width: 1408px) {
+  .container {
+    max-width: 1344px;
+    width: 1344px;
+  }
+} */
+/*------------------------------------------------------------------
+  X. @COLUMN(S) SELECTOR
+-------------------------------------------------------------------*/
+.column {
+    display: block;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    padding: 10px
+}
+@media screen and (min-width:769px) {
+    .column.is-full {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 100%
+    }
+    .column.is-three-quarters {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 75%
+    }
+    .column.is-two-thirds {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 66.6666%
+    }
+    .column.is-half {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 50%
+    }
+    .column.is-one-third {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 33.3333%
+    }
+    .column.is-one-quarter {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 25%
+    }
+
+    .column.is-1,
+    .column.is-1-tablet {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 8.33333%
+    }
+    .column.is-2 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 16.66667%
+    }
+    .column.is-3 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 25%
+    }
+    .column.is-4 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 33.33333%
+    }
+    .column.is-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 41.66667%
+    }
+    .column.is-6{
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 50%
+    }
+    .column.is-7 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 58.33333%
+    }
+    .column.is-8 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 66.66667%
+    }
+    .column.is-9 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 75%
+    }
+    .column.is-10{
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 83.33333%
+    }
+    .column.is-11 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 91.66667%
+    }
+    .column.is-12 {
+        -webkit-box-flex: 0;
+        -ms-flex: none;
+        flex: none;
+        width: 100%
+    }
+}
+.columns {
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px
+}
+
+.columns:last-child {
+    margin-bottom: -10px
+}
+
+.columns:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.columns.is-centered {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+
+@media screen and (min-width:769px) {
+    .columns.is-grid {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap
+    }
+    .columns.is-grid>.column {
+        max-width: 33.3333%;
+        padding: 10px;
+        width: 33.3333%
+    }
+    .columns.is-grid>.column+.column {
+        margin-left: 0
+    }
+}
+
+.columns.is-multiline {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+}
+
+.columns.is-vcentered {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+/*------------------------------------------------------------------
+  X. @NAV SELECTOR
+-------------------------------------------------------------------*/
+.nav-left{
+    overflow: hidden
+}
+
+.nav-item {
+    -webkit-box-align: center
+}
+.nav-toggle {
+    cursor: pointer;
+    display: block;
+    height: 50px;
+    position: relative;
+    width: 50px
+}
+
+.nav-toggle span {
+    background-color: #4a4a4a;
+    display: block;
+    height: 1px;
+    left: 50%;
+    margin-left: -7px;
+    position: absolute;
+    top: 50%;
+    -webkit-transition: none 86ms ease-out;
+    transition: none 86ms ease-out;
+    -webkit-transition-property: background, left, opacity, -webkit-transform;
+    transition-property: background, left, opacity, -webkit-transform;
+    transition-property: background, left, opacity, transform;
+    transition-property: background, left, opacity, transform, -webkit-transform;
+    width: 15px
+}
+
+.nav-toggle span:nth-child(1) {
+    margin-top: -6px
+}
+
+.nav-toggle span:nth-child(2) {
+    margin-top: -1px
+}
+
+.nav-toggle span:nth-child(3) {
+    margin-top: 4px
+}
+
+.nav-toggle:hover {
+    background-color: #f5f5f5
+}
+
+.nav-toggle.is-active span {
+    background-color: #00d1b2
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+    margin-left: -5px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform-origin: left top;
+    transform-origin: left top
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+    opacity: 0
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+    margin-left: -5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom
+}
+
+@media screen and (min-width:769px) {
+    .nav-toggle {
+        display: none
+    }
+}
+
+.nav-item,
+.nav-left {
+    display: -webkit-box;
+    display: -ms-flexbox
+}
+
+.nav-item {
+    -ms-flex-align: center;
+    align-items: center;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 10px
+}
+
+.nav-item a {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.nav-item img {
+    max-height: 24px
+}
+
+.nav-item .button+.button {
+    margin-left: 10px
+}
+
+.nav-item a,
+a.nav-item {
+    color: #7a7a7a
+}
+
+.nav-item a.is-active,
+.nav-item a:hover,
+a.nav-item.is-active,
+a.nav-item:hover {
+    color: #363636
+}
+
+@media screen and (max-width:768px) {
+    .nav-item {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start
+    }
+    .nav-menu {
+        background-color: #fff;
+        box-shadow: 0 4px 7px rgba(10, 10, 10, .1);
+        left: 0;
+        display: none;
+        right: 0;
+        top: 100%;
+        position: absolute
+    }
+    .nav-menu .nav-item {
+        border-top: 1px solid rgba(219, 219, 219, .5);
+        padding: 10px
+    }
+    .nav-menu.is-active {
+        display: block
+    }
+}
+
+.container>.nav>.nav-left>.nav-item:first-child:not(.is-tab),
+.nav>.container>.nav-left>.nav-item:first-child:not(.is-tab) {
+    padding-left: 0
+}
+
+@media screen and (min-width:769px) and (max-width:979px) {
+    .nav-menu {
+        padding-right: 20px
+    }
+}
+
+.container>.nav>.nav-right>.nav-item:last-child:not(.is-tab),
+.nav>.container>.nav-right>.nav-item:last-child:not(.is-tab) {
+    padding-right: 0
+}
+
+.nav-left {
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: flex;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    overflow-x: auto
+}
+
+.nav,
+.nav-center {
+    -webkit-box-align: stretch
+}
+
+.nav-center {
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@media screen and (min-width:769px) {
+    .nav-right {
+        -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end
+    }
+}
+
+.nav,
+.nav>.container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    min-height: 50px
+}
+
+.nav {
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    background-color: #fff;
+    display: flex;
+    position: relative;
+    z-index: 2
+}
+
+.panel-heading,
+.tabs.is-boxed a:hover,
+a.panel-block:hover {
+    background-color: #f5f5f5
+}
+
+.nav>.container {
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    display: flex;
+    width: 100%
+}
+
+.nav.has-shadow {
+    box-shadow: 0 2px 3px rgba(10, 10, 10, .1)
+}
+
+@media screen and (max-width:979px) {
+    .container>.nav>.nav-left>.nav-item.is-brand:first-child,
+    .nav>.container>.nav-left>.nav-item.is-brand:first-child {
+        padding-left: 20px
+    }
+}
+
+/*------------------------------------------------------------------
+  X. @ICON SELECTOR
+-------------------------------------------------------------------*/
+
+
+.icon {
+    height: 24px;
+    line-height: 24px;
+    width: 24px
+}
+
+
+
+/* .icon.is-medium {
+    font-size: 28px;
+    height: 32px;
+    line-height: 32px;
+    width: 32px
+} */
+
+.icon.is-large {
+    font-size: 42px;
+    height: 48px;
+    line-height: 48px;
+    width: 48px
+}
+.icon,
+.icon.is-large,
+.icon.is-medium {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center
+}
+/*------------------------------------------------------------------
+  X. @BUTTON SELECTOR
+-------------------------------------------------------------------*/
+.button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    line-height: 24px;
+    position: relative;
+    vertical-align: top;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center
+}
+.button:hover {
+    border-color: #b5b5b5
+}
+
+.button:active,
+.button:focus {
+    border-color: #00d1b2;
+    outline: 0
+}
+
+.button[disabled] {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: .5
+}
+
+.button[disabled]::-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.button[disabled]::-webkit-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.button[disabled]:-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.button[disabled]:-ms-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+.button:active,
+.button:focus,
+.button:hover {
+    color: #363636
+}
+
+.button:active {
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, .2)
+}
+
+.button.is-success {
+    background-color: #23d160;
+    border-width: 0;
+    color: #fff
+}
+
+.button.is-success:active,
+.button.is-success:focus,
+.button.is-success:hover {
+    background-color: #20bc56;
+    border-color: transparent;
+    color: #fff
+}
+.button.is-warning {
+    background-color: #ffdd57;
+    border-width: 0;
+    color: rgba(0, 0, 0, .7)
+}
+
+.button.is-warning:active,
+.button.is-warning:focus,
+.button.is-warning:hover {
+    background-color: #ffd83d;
+    border-color: transparent;
+    color: rgba(0, 0, 0, .7)
+}
+.button.is-danger {
+    background-color: #ff3860;
+    border-width: 0;
+    color: #fff
+}
+
+.button.is-danger:active,
+.button.is-danger:focus,
+.button.is-danger:hover {
+    background-color: #ff1f4b;
+    border-color: transparent;
+    color: #fff
+}
+.button.is-medium {
+    font-size: 18px;
+    height: 40px;
+    padding-left: 14px;
+    padding-right: 14px
+}
+
+.button.is-large {
+    font-size: 22px;
+    height: 48px;
+    padding-left: 20px;
+    padding-right: 20px
+}
+
+.button.is-fullwidth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%
+}
+
+.button.is-loading {
+    color: transparent!important;
+    pointer-events: none
+}
+/*------------------------------------------------------------------
+  X. @INPUT TEXTAREA SELECTORS
+-------------------------------------------------------------------*/
+/* .input,
+.textarea {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    font-size: 14px;
+    height: 32px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    padding-right: 8px;
+    position: relative;
+    vertical-align: top;
+    box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
+    width: 100%
+} */
+
+.input:hover,
+.textarea:hover {
+    border-color: #b5b5b5
+}
+
+/* .input:active,
+.input:focus,
+.textarea:active,
+.textarea:focus {
+    border-color: #00d1b2;
+    outline: 0;
+    -webkit-box-shadow: 0 0 5px #51cbee;
+  box-shadow: 0 0 5px #51cbee;
+} */
+
+.input[disabled],
+.textarea[disabled] {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    cursor: not-allowed;
+    pointer-events: none
+}
+.input[disabled]::-moz-placeholder,
+.textarea[disabled]::-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.input[disabled]::-webkit-input-placeholder,
+.textarea[disabled]::-webkit-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.input[disabled]:-moz-placeholder,
+.textarea[disabled]:-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.input[disabled]:-ms-input-placeholder,
+.textarea[disabled]:-ms-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.input.is-success,
+.textarea.is-success {
+    border-color: #23d160
+}
+
+.input.is-warning,
+.textarea.is-warning {
+    border-color: #ffdd57
+}
+
+.input.is-danger,
+.textarea.is-danger {
+    border-color: #ff3860
+}
+
+.input[type=search] {
+    border-radius: 290486px
+}
+/* .input.is-medium,
+.textarea.is-medium {
+    font-size: 18px;
+    height: 40px;
+    line-height: 32px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.input.is-large,
+.textarea.is-large {
+    font-size: 24px;
+    height: 48px;
+    line-height: 40px;
+    padding-left: 12px;
+    padding-right: 12px
+} */
+
+.input.is-fullwidth,
+.textarea.is-fullwidth {
+    display: block;
+    width: 100%
+}
+
+.input.is-inline,
+.textarea.is-inline {
+    display: inline;
+    width: auto
+}
+
+.textarea {
+    display: block;
+    line-height: 1.2;
+    max-height: 600px;
+    min-height: 120px;
+    min-width: 100%;
+    padding: 10px;
+    resize: vertical
+}
+/*------------------------------------------------------------------
+  X. @RADIO CHECKBOX SELECTORS
+-------------------------------------------------------------------*/
+.checkbox input,
+.radio input,
+.select select {
+    cursor: pointer
+}
+.checkbox,
+.radio,
+.select {
+    display: inline-block;
+    position: relative;
+    vertical-align: top
+}
+
+.checkbox,
+.radio {
+    cursor: pointer;
+    line-height: 16px
+}
+
+.checkbox:hover,
+.radio:hover {
+    color: #363636
+}
+
+.checkbox.is-disabled,
+.radio.is-disabled {
+    color: #dbdbdb;
+    pointer-events: none
+}
+
+.checkbox.is-disabled input,
+.radio.is-disabled input {
+    pointer-events: none
+}
+
+.radio+.radio {
+    margin-left: 10px
+}
+/*------------------------------------------------------------------
+  X. @SELECT SELECTOR
+-------------------------------------------------------------------*/
+.select {
+    height: 32px
+}
+
+.select select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    color: #363636;
+    font-size: 14px;
+    height: 32px;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    line-height: 24px;
+    padding-left: 8px;
+    position: relative;
+    vertical-align: top;
+    display: block;
+    outline: 0;
+    padding-right: 36px
+}
+
+.select select.is-active,
+.select select:active,
+.select select:focus {
+    border-color: #00d1b2;
+    outline: 0
+}
+
+.select select.is-disabled,
+.select select[disabled] {
+    background-color: #f5f5f5;
+    border-color: #dbdbdb;
+    cursor: not-allowed;
+    pointer-events: none
+}
+
+.select select.is-disabled::-moz-placeholder,
+.select select[disabled]::-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.select select.is-disabled::-webkit-input-placeholder,
+.select select[disabled]::-webkit-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.select select.is-disabled:-moz-placeholder,
+.select select[disabled]:-moz-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.select select.is-disabled:-ms-input-placeholder,
+.select select[disabled]:-ms-input-placeholder {
+    color: rgba(54, 54, 54, .3)
+}
+
+.select select.is-success {
+    border-color: #23d160
+}
+
+.select select.is-warning {
+    border-color: #ffdd57
+}
+
+.select select.is-danger {
+    border-color: #ff3860
+}
+
+.select select:hover {
+    border-color: #b5b5b5
+}
+
+.select select::ms-expand {
+    display: none
+}
+
+.help,
+.label,
+.select:after {
+    display: block
+}
+
+.select.is-fullwidth,
+.select.is-fullwidth select {
+    width: 100%
+}
+
+.select:after {
+    border: 1px solid #00d1b2;
+    border-right: 0;
+    border-top: 0;
+    height: 7px;
+    pointer-events: none;
+    position: absolute;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 7px;
+    margin-top: -6px;
+    right: 16px;
+    top: 50%
+}
+.select:hover:after {
+    border-color: #363636
+}
+
+.select.is-medium {
+    height: 40px
+}
+
+.select.is-medium select {
+    font-size: 18px;
+    height: 40px;
+    line-height: 32px;
+    padding-left: 10px;
+    padding-right: 44px
+}
+
+.select.is-large {
+    height: 48px
+}
+
+.select.is-large select {
+    font-size: 24px;
+    height: 48px;
+    line-height: 40px;
+    padding-left: 12px;
+    padding-right: 52px
+}
+/*------------------------------------------------------------------
+  X. @LABEL SELECTOR
+-------------------------------------------------------------------*/
+.label {
+    color: #363636
+}
+
+.label:not(:last-child) {
+    margin-bottom: .5em
+}
+/*------------------------------------------------------------------
+  X. @HELP SELECTOR
+-------------------------------------------------------------------*/
+.help {
+    font-size: 11px;
+    margin-top: 5px
+}
+.help.is-info {
+    color: #3273dc
+}
+
+.help.is-success {
+    color: #23d160
+}
+
+.help.is-warning {
+    color: #ffdd57
+}
+
+.help.is-danger {
+    color: #ff3860
+}
+/*------------------------------------------------------------------
+  X. @CONTROL SELECTOR
+-------------------------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+    .control-label {
+        margin-bottom: 5px
+    }
+}
+
+@media screen and (min-width:769px) {
+    .control-label {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        -ms-flex-negative: 0;
+        flex-shrink: 0;
+        margin-right: 20px;
+        padding-top: 7px;
+        text-align: right
+    }
+}
+
+.control {
+    position: relative;
+    text-align: left
+}
+
+.control:not(:last-child) {
+    margin-bottom: 10px
+}
+
+.control.has-addons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.control.has-addons .button,
+.control.has-addons .input,
+.control.has-addons .select {
+    border-radius: 0;
+    margin-right: -1px;
+    width: auto
+}
+
+.control.has-addons .button:hover,
+.control.has-addons .input:hover,
+.control.has-addons .select:hover {
+    z-index: 2
+}
+
+.control.has-addons .button:active,
+.control.has-addons .button:focus,
+.control.has-addons .input:active,
+.control.has-addons .input:focus,
+.control.has-addons .select:active,
+.control.has-addons .select:focus {
+    z-index: 3
+}
+
+.control.has-addons .button:first-child,
+.control.has-addons .button:first-child select,
+.control.has-addons .input:first-child,
+.control.has-addons .input:first-child select,
+.control.has-addons .select:first-child,
+.control.has-addons .select:first-child select {
+    border-radius: 3px 0 0 3px
+}
+
+.control.has-addons .button:last-child,
+.control.has-addons .button:last-child select,
+.control.has-addons .input:last-child,
+.control.has-addons .input:last-child select,
+.control.has-addons .select:last-child,
+.control.has-addons .select:last-child select {
+    border-radius: 0 3px 3px 0
+}
+
+.control.has-addons .button.is-expanded,
+.control.has-addons .input.is-expanded,
+.control.has-addons .select.is-expanded {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.control.has-addons.has-addons-centered {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.control.has-addons.has-addons-right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+.control.has-addons.has-addons-fullwidth .button,
+.control.has-addons.has-addons-fullwidth .input,
+.control.has-addons.has-addons-fullwidth .select {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0
+}
+
+.control.has-icon>.fa {
+    display: inline-block;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    vertical-align: top;
+    width: 24px;
+    color: #dbdbdb;
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    z-index: 4
+}
+
+.control.has-icon .input:focus+.fa {
+    color: #b5b5b5
+}
+
+.control.has-icon .input.is-small+.fa {
+    font-size: 10.5px;
+    top: 0
+}
+
+.control.has-icon .input.is-medium+.fa {
+    font-size: 21px;
+    top: 8px
+}
+
+.control.has-icon .input.is-large+.fa {
+    font-size: 21px;
+    top: 12px
+}
+
+.control.has-icon:not(.has-icon-right)>.fa {
+    left: 4px
+}
+
+.control.has-icon:not(.has-icon-right) .input {
+    padding-left: 32px
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-small {
+    padding-left: 24px
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-small+.fa {
+    left: 0
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-medium {
+    padding-left: 40px
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-medium+.fa {
+    left: 8px
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-large {
+    padding-left: 48px
+}
+
+.control.has-icon:not(.has-icon-right) .input.is-large+.fa {
+    left: 12px
+}
+
+.control.has-icon.has-icon-right>.fa {
+    right: 4px
+}
+
+.control.has-icon.has-icon-right .input {
+    padding-right: 32px
+}
+
+.control.has-icon.has-icon-right .input.is-small {
+    padding-right: 24px
+}
+
+.control.has-icon.has-icon-right .input.is-small+.fa {
+    right: 0
+}
+
+.control.has-icon.has-icon-right .input.is-medium {
+    padding-right: 40px
+}
+
+.control.has-icon.has-icon-right .input.is-medium+.fa {
+    right: 8px
+}
+
+.control.has-icon.has-icon-right .input.is-large {
+    padding-right: 48px
+}
+
+.control.has-icon.has-icon-right .input.is-large+.fa {
+    right: 12px
+}
+.control.has-icons-left .input:focus ~ .icon,
+.control.has-icons-left .select:focus ~ .icon, .control.has-icons-right .input:focus ~ .icon,
+.control.has-icons-right .select:focus ~ .icon {
+  color: #7a7a7a;
+}
+
+.control.has-icons-left .input.is-small ~ .icon,
+.control.has-icons-left .select.is-small ~ .icon, .control.has-icons-right .input.is-small ~ .icon,
+.control.has-icons-right .select.is-small ~ .icon {
+  font-size: 0.75rem;
+}
+
+.control.has-icons-left .input.is-medium ~ .icon,
+.control.has-icons-left .select.is-medium ~ .icon, .control.has-icons-right .input.is-medium ~ .icon,
+.control.has-icons-right .select.is-medium ~ .icon {
+  font-size: 1.25rem;
+}
+
+.control.has-icons-left .input.is-large ~ .icon,
+.control.has-icons-left .select.is-large ~ .icon, .control.has-icons-right .input.is-large ~ .icon,
+.control.has-icons-right .select.is-large ~ .icon {
+ /*  font-size: 1.5rem; */
+}
+
+.control.has-icons-left .icon, .control.has-icons-right .icon {
+  /* color: #dbdbdb;
+   height: 2.25em;
+   pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 2.25em;
+  z-index: 4; */
+}
+
+/* .control.has-icons-left .input,
+.control.has-icons-left .select select {
+  padding-left: 2.25em;
+} */
+
+.control.has-icons-left .icon.is-left {
+  left: 0;
+}
+
+/* .control.has-icons-right .input,
+.control.has-icons-right .select select {
+  padding-right: 2.25em;
+} */
+
+.control.has-icons-right .icon.is-right {
+  right: 0;
+}
+
+.control.is-grouped {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start
+}
+
+.control.is-grouped>.control:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 10px
+}
+
+.control.is-grouped>.control.is-expanded {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1
+}
+
+.control.is-grouped.is-grouped-centered {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center
+}
+
+.control.is-grouped.is-grouped-right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end
+}
+
+@media screen and (min-width:769px) {
+    .control.is-horizontal {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex
+    }
+    .control.is-horizontal>.control {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+        flex-grow: 5;
+        -ms-flex-negative: 1;
+        flex-shrink: 1
+    }
+}
+
+.control.is-loading:after {
+    -webkit-animation: spinAround .5s infinite linear;
+    animation: spinAround .5s infinite linear;
+    border: 2px solid #dbdbdb;
+    border-radius: 290486px;
+    border-right-color: transparent;
+    border-top-color: transparent;
+    display: block;
+    height: 16px;
+    width: 16px;
+    position: absolute!important;
+    right: 8px;
+    top: 8px
+}
+

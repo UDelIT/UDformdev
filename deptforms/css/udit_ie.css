@@ -1,0 +1,84 @@
+/**
+* @IE CSS
+*
+* Defines all of the structural and layout styles specifically for
+* Internet Explorer 11 and Microsoft Edge that's used on public facing pages
+* hosted on www.udel.edu.
+*
+* This file loads on all devices and platforms.
+*
+* @version      2.0.0
+* @since        1.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @license      MIT License
+*/
+/*------------------------------------------------------------------
+  1. @IE11 HACKS
+      a. Hide native select list button in IE11
+      b. Show the overflow in IE, Edge.
+      c. Correct the text wrapping in Edge and IE.
+      d. Correct the color inheritance from `fieldset` elements in IE.
+      e. Remove the default vertical scrollbar in IE.
+      f. Support for IE.
+      g. Show the overflow in Edge and IE.
+      h. Remove the gray background on active links in IE 10.
+      i. Remove the border on images inside links in IE 10-.
+      j. Hide the overflow in IE.
+      k. Make svg image fluid in IE
+         https://tympanus.net/Tutorials/ResponsiveSVGs/index.html
+      l. Add the correct box sizing in IE 10-.
+      m. Remove the padding in IE 10-.
+------------------------------------------------------------------*/
+select::-ms-expand {
+  display: none /* a */
+}
+select {
+  padding-right: 1em !important;
+}
+button,
+input { /* c */
+  overflow: visible;
+}
+legend {
+  box-sizing: border-box; /* c */
+  color: #4680DC; /* d  inherit for IE */
+  display: table; /* c */
+  max-width: 100%; /* c */
+  white-space: normal; /* c */
+}
+textarea {
+  overflow: auto; /* e */
+}
+.material-icons,
+[data-icon-after]::after {
+   -webkit-font-feature-settings: 'liga'; /* f */
+  font-feature-settings: 'liga';
+}
+figcaption,
+figure,
+main { /* f */
+  display: block;
+}
+hr {
+  overflow: visible; /* g */
+}
+a {
+  background-color: transparent; /* h */
+}
+img {
+  border-style: none; /* i */
+}
+svg:not(:root) {
+  overflow: hidden; /* j */
+}
+img:not(.png) {
+  width: 100%; /* k */
+}
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* l */
+  padding: 0; /* m */
+}
+.is_ie .ud_circle_logo.ud_grid-cell {
+  padding-left: 0em;
+}

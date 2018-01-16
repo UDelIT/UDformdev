@@ -1,0 +1,52 @@
+/**
+* @MOBILE CSS
+*
+* Defines all of the structural and layout styles specifically for
+* Mobile devices that's used on public facing pages hosted on public facing
+* pages hosted on www.udel.edu.
+*
+* This file loads on all mobile devices only.
+*
+* @version      2.0.0
+* @since        1.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @license      MIT License
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+   1. @BASE
+   2. @SECTIONS
+   3. @GROUPING CONTENT
+   4. @TEXT-LEVEL SEMANTICS
+   5. @EMBEDDED CONTENT
+   6. @FORMS
+   8. @UD HELPER CLASSES
+   9. @FORMS
+   10. @MEDIA QUERIES
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  1. @BASE
+     a. Disable font boosting on mobile browsers
+        https://gist.github.com/mojoaxel/7469194
+     b. Chrome for Android
+     c. Firefox Mobile
+-------------------------------------------------------------------*/
+html {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+body * { /* a */
+  max-height: 1000000em; /* b */
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none; /* c */
+}
+/*------------------------------------------------------------------
+  6. @FORMS
+    a. Prevent a WebKit bug where (b) destroys native `audio` and `video`
+       controls in Android 4.
+    b. Correct the inability to style clickable types in iOS and Safari.
+-------------------------------------------------------------------*/
+button,
+html [type="button"], /* a */
+[type="submit"] {
+  -webkit-appearance: button; /* b */
+}

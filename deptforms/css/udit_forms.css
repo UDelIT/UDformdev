@@ -1,0 +1,976 @@
+.input,
+.textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 0;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: calc(.375em - 1px) calc(.625em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: #fff;
+  color: #363636;
+  box-shadow: inset 0 1px 2px rgba(10, 10, 10, .1);
+  width: 100%
+}
+
+.input {
+  max-width: 100%;
+  color: #9e9e9e;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  font-size: 1rem;
+  cursor: text;
+  -webkit-transition: -webkit-transform .2s ease-out;
+  transition: -webkit-transform .2s ease-out;
+  transition: transform .2s ease-out;
+  transition: transform .2s ease-out,
+  -webkit-transform .2s ease-out;
+  -webkit-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+  text-align: initial;
+  -webkit-transform: translateY(12px);
+  transform: translateY(12px);
+  pointer-events: none;
+  border: 0;
+  padding-left: 0;
+  padding-right: 0;
+  box-shadow: inset 0 -1px 0 #dbdbdb;
+  transition: all 300ms
+}
+
+.textarea {
+  border: 1px solid transparent;
+  border-color: #dbdbdb
+}
+
+
+.input.is-active,
+.input.is-focused,
+.input:active,
+.input:focus,
+.select select.is-active,
+.select select.is-focused,
+.select select:active,
+.select select:focus,
+.textarea.is-active,
+.textarea.is-focused,
+.textarea:active,
+.textarea:focus {
+  box-shadow: 0 0 5px #51CBEE;
+  border: 1px solid #51CBEE;
+  outline: 0;
+}
+
+.input[disabled],
+.select select[disabled],
+.textarea[disabled] {
+  background-color: transparent;
+  border-color: #f5f5f5;
+  box-shadow: none;
+  color: #7a7a7a;
+  cursor: not-allowed
+}
+
+.input[disabled]:-moz-placeholder,
+.input[disabled]::-moz-placeholder,
+.select select[disabled]:-moz-placeholder,
+.select select[disabled]::-moz-placeholder,
+.textarea[disabled]:-moz-placeholder,
+.textarea[disabled]::-moz-placeholder {
+  color: rgba(122, 122, 122, .3)
+}
+
+.input[disabled]::-webkit-input-placeholder,
+.select select[disabled]::-webkit-input-placeholder,
+.textarea[disabled]::-webkit-input-placeholder {
+  color: rgba(122, 122, 122, .3)
+}
+
+.input[disabled]:-ms-input-placeholder,
+.select select[disabled]:-ms-input-placeholder,
+.textarea[disabled]:-ms-input-placeholder {
+  color: rgba(122, 122, 122, .3)
+}
+
+.input.is-success,
+.textarea.is-success {
+  border-color: #00E676
+}
+
+.input.is-success.is-active,
+.input.is-success.is-focused,
+.input.is-success:active,
+.input.is-success:focus,
+.textarea.is-success.is-active,
+.textarea.is-success.is-focused,
+.textarea.is-success:active,
+.textarea.is-success:focus {
+  box-shadow: 0 1px 0 0 #00E676
+}
+
+
+
+.input.is-danger,
+.textarea.is-danger {
+  border-color: #F44336
+}
+
+.input.is-danger.is-active,
+.input.is-danger.is-focused,
+.input.is-danger:active,
+.input.is-danger:focus,
+.textarea.is-danger.is-active,
+.textarea.is-danger.is-focused,
+.textarea.is-danger:active,
+.textarea.is-danger:focus {
+  box-shadow: 0 0 0 .125em rgba(244, 67, 54, .25)
+}
+
+
+.textarea {
+  display: block;
+  max-width: 100%;
+  min-width: 100%;
+  padding: .625em;
+  resize: vertical
+}
+
+.textarea:not([rows]) {
+  max-height: 600px;
+  min-height: 120px
+}
+
+.textarea[rows] {
+  height: unset
+}
+
+
+.checkbox,
+.radio,
+.select {
+  display: inline-block;
+  position: relative
+}
+
+.checkbox,
+.radio {
+  cursor: pointer;
+  line-height: 1.25
+}
+
+.checkbox input,
+.radio input {
+  cursor: pointer
+}
+
+.checkbox:hover,
+.radio:hover {
+  color: #363636
+}
+
+.checkbox[disabled],
+.radio[disabled] {
+  color: #7a7a7a;
+  cursor: not-allowed
+}
+
+.radio+.radio {
+  margin-left: .5em
+}
+
+.select {
+  max-width: 100%;
+  vertical-align: top
+}
+
+.select:not(.is-multiple) {
+  height: 2.25em
+}
+
+.select:not(.is-multiple)::after {
+  border: 1px solid #51CBEE;
+  border-right: 0;
+  border-top: 0;
+  content: " ";
+  display: block;
+  height: .5em;
+  pointer-events: none;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: .5em;
+  margin-top: -.375em;
+  right: 1.125em;
+  top: 50%;
+  z-index: 4
+}
+
+.select select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 1rem;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  line-height: 1.5;
+  padding: calc(.375em - 1px) calc(.625em - 1px);
+  position: relative;
+  vertical-align: top;
+  background-color: #fff;
+  color: #363636;
+  cursor: pointer;
+  display: block;
+  max-width: 100%;
+  outline: 0
+}
+
+.select select::-ms-expand {
+  display: none
+}
+
+.select select:not([multiple]) {
+  padding-right: 2.5em
+}
+
+.select select[multiple] {
+  height: unset;
+  padding: 0
+}
+
+.select select[multiple] option {
+  padding: .5em 1em
+}
+
+.select:hover::after {
+  border-color: #363636
+}
+
+.select.is-white select {
+  border-color: #fff
+}
+
+
+.select.is-success select {
+  border-color: #00E676
+}
+
+.select.is-success select.is-active,
+.select.is-success select.is-focused,
+.select.is-success select:active,
+.select.is-success select:focus {
+  box-shadow: 0 1px 0 0 #00E676
+}
+
+
+
+.select.is-danger select {
+  border-color: #F44336
+}
+
+.select.is-danger select.is-active,
+.select.is-danger select.is-focused,
+.select.is-danger select:active,
+.select.is-danger select:focus {
+  box-shadow: 0 0 0 .125em rgba(244, 67, 54, .25)
+}
+
+
+.select.is-disabled::after {
+  border-color: #7a7a7a
+}
+
+
+.label {
+  color: #363636;
+  display: block;
+  font-weight: 700
+}
+
+.label:not(:last-child) {
+  margin-bottom: .5em
+}
+.field:not(:last-child) {
+  margin-bottom: .75rem
+}
+
+.field.has-addons,
+.field.is-grouped {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start
+}
+
+.field.has-addons .control:not(:last-child) {
+  margin-right: -1px
+}
+
+.field.has-addons .control:first-child .button,
+.field.has-addons .control:first-child .input,
+.field.has-addons .control:first-child .select select {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0
+}
+
+.field.has-addons .control:last-child .button,
+.field.has-addons .control:last-child .input,
+.field.has-addons .control:last-child .select select {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0
+}
+
+.field.has-addons .control .button,
+.field.has-addons .control .input,
+.field.has-addons .control .select select {
+  border-radius: 0
+}
+
+.field.has-addons .control .button.is-hovered,
+.field.has-addons .control .button:hover,
+.field.has-addons .control .input.is-hovered,
+.field.has-addons .control .input:hover,
+.field.has-addons .control .select select.is-hovered,
+.field.has-addons .control .select select:hover {
+  z-index: 2
+}
+
+.field.has-addons .control .button.is-active,
+.field.has-addons .control .button.is-focused,
+.field.has-addons .control .button:active,
+.field.has-addons .control .button:focus,
+.field.has-addons .control .input.is-active,
+.field.has-addons .control .input.is-focused,
+.field.has-addons .control .input:active,
+.field.has-addons .control .input:focus,
+.field.has-addons .control .select select.is-active,
+.field.has-addons .control .select select.is-focused,
+.field.has-addons .control .select select:active,
+.field.has-addons .control .select select:focus {
+  z-index: 3
+}
+
+.field.has-addons .control .button.is-active:hover,
+.field.has-addons .control .button.is-focused:hover,
+.field.has-addons .control .button:active:hover,
+.field.has-addons .control .button:focus:hover,
+.field.has-addons .control .input.is-active:hover,
+.field.has-addons .control .input.is-focused:hover,
+.field.has-addons .control .input:active:hover,
+.field.has-addons .control .input:focus:hover,
+.field.has-addons .control .select select.is-active:hover,
+.field.has-addons .control .select select.is-focused:hover,
+.field.has-addons .control .select select:active:hover,
+.field.has-addons .control .select select:focus:hover {
+  z-index: 4
+}
+
+.field.has-addons .control.is-expanded,
+.field.has-addons.has-addons-fullwidth .control {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1
+}
+
+.field.has-addons.has-addons-centered {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.field.has-addons.has-addons-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+.field.has-addons.has-addons-fullwidth .control {
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+
+.field.is-grouped>.control {
+  -ms-flex-negative: 0;
+  flex-shrink: 0
+}
+
+.field.is-grouped>.control:not(:last-child) {
+  margin-bottom: 0;
+  margin-right: .75rem
+}
+
+.field.is-grouped>.control.is-expanded {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1
+}
+
+.breadcrumb.is-centered ol,
+.breadcrumb.is-centered ul,
+.field.is-grouped.is-grouped-centered {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.breadcrumb.is-right ol,
+.breadcrumb.is-right ul,
+.field.is-grouped.is-grouped-right {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+@media screen and (min-width:769px),
+print {
+  .field.is-horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+  }
+}
+
+.field-label .label {
+  font-size: inherit
+}
+
+@media screen and (max-width:768px) {
+  .field-label {
+    margin-bottom: .5rem
+  }
+}
+
+@media screen and (min-width:769px),
+print {
+  .field-label {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    margin-right: 1.5rem;
+    text-align: right
+  }
+  .field-label.is-small {
+    font-size: .75rem;
+    padding-top: .375em
+  }
+  .field-label.is-normal {
+    padding-top: .375em
+  }
+  .field-label.is-medium {
+    font-size: 1.25rem;
+    padding-top: .375em
+  }
+}
+
+.field-body .field .field {
+  margin-bottom: 0
+}
+
+@media screen and (min-width:769px),
+print {
+  .field-body {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 5;
+    -ms-flex-positive: 5;
+    flex-grow: 5
+  }
+  .field-body .field {
+    margin-bottom: 0
+  }
+  .field-body,
+  .field-body>.field {
+    -ms-flex-negative: 1;
+    flex-shrink: 1
+  }
+  .field-body>.field:not(.is-narrow) {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1
+  }
+  .field-body>.field:not(:last-child) {
+    margin-right: .75rem
+  }
+}
+
+.control {
+  position: relative;
+  text-align: left
+}
+
+.control.has-icon .icon {
+  height: 2.25em
+}
+
+.control.has-icon .icon,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon {
+  color: #dbdbdb;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: 2.25em;
+  z-index: 4
+}
+
+.control.has-icon .input:focus+.icon {
+  color: #7a7a7a
+}
+
+.control.has-icon .input.is-small+.icon {
+  font-size: .75rem
+}
+
+.control.has-icon .input.is-medium+.icon {
+  font-size: 1.25rem
+}
+
+.control.has-icon .input.is-large+.icon {
+  font-size: 1.5rem
+}
+
+.control.has-icon:not(.has-icon-right) .icon {
+  left: 0
+}
+
+.control.has-icon:not(.has-icon-right) .input {
+  padding-left: 2.25em
+}
+
+.control.has-icon.has-icon-right .icon {
+  right: 0
+}
+
+.control.has-icon.has-icon-right .input {
+  padding-right: 2.25em
+}
+
+.control.has-icons-left .input:focus~.icon,
+.control.has-icons-left .select:focus~.icon,
+.control.has-icons-right .input:focus~.icon,
+.control.has-icons-right .select:focus~.icon {
+  color: #7a7a7a
+}
+
+.control.has-icons-left .input.is-small~.icon,
+.control.has-icons-left .select.is-small~.icon,
+.control.has-icons-right .input.is-small~.icon,
+.control.has-icons-right .select.is-small~.icon,
+.control.is-loading.is-small:after {
+  font-size: .75rem
+}
+
+.control.has-icons-left .input.is-medium~.icon,
+.control.has-icons-left .select.is-medium~.icon,
+.control.has-icons-right .input.is-medium~.icon,
+.control.has-icons-right .select.is-medium~.icon,
+.control.is-loading.is-medium:after {
+  font-size: 1.25rem
+}
+
+.control.has-icons-left .input.is-large~.icon,
+.control.has-icons-left .select.is-large~.icon,
+.control.has-icons-right .input.is-large~.icon,
+.control.has-icons-right .select.is-large~.icon,
+.control.is-loading.is-large:after {
+  font-size: 1.5rem
+}
+
+.control.has-icons-left .input,
+.control.has-icons-left .select select {
+  padding-left: 2.25em
+}
+
+.control.has-icons-left .icon.is-left {
+  left: 0
+}
+
+.control.has-icons-right .input,
+.control.has-icons-right .select select {
+  padding-right: 2.25em
+}
+
+.control.has-icons-right .icon.is-right {
+  right: 0
+}
+
+.control.is-loading::after {
+  -webkit-animation: spinAround 500ms infinite linear;
+  animation: spinAround 500ms infinite linear;
+  border: 2px solid #dbdbdb;
+  border-radius: 290486px;
+  border-right-color: transparent;
+  border-top-color: transparent;
+  content: "";
+  display: block;
+  height: 1em;
+  width: 1em;
+  position: absolute!important;
+  right: .625em;
+  top: .625em
+}
+
+.icon {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem
+}
+
+.icon.is-small {
+  height: 1rem;
+  width: 1rem
+}
+
+.icon.is-medium {
+  height: 2rem;
+  width: 2rem
+}
+
+.icon.is-large {
+  height: 3rem;
+  width: 3rem
+}
+.dropdown {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  vertical-align: top
+}
+
+.dropdown.is-active .dropdown-menu,
+.dropdown.is-hoverable:hover .dropdown-menu {
+  display: block
+}
+
+.dropdown.is-right .dropdown-menu {
+  left: auto;
+  right: 0
+}
+
+.dropdown-menu {
+  display: none;
+  left: 0;
+  min-width: 12rem;
+  padding-top: 4px;
+  position: absolute;
+  top: 100%;
+  z-index: 20
+}
+
+.dropdown-content {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12);
+  padding-bottom: .5rem;
+  padding-top: .5rem
+}
+
+.dropdown-item {
+  color: #4a4a4a;
+  display: block;
+  font-size: .875rem;
+  line-height: 1.5;
+  padding: .375rem 1rem;
+  position: relative
+}
+
+a.dropdown-item {
+  padding-right: 3rem;
+  white-space: nowrap
+}
+
+a.dropdown-item:hover {
+  background-color: #f5f5f5;
+  color: #0a0a0a
+}
+
+a.dropdown-item.is-active {
+  background-color: #51CBEE;
+  color: #fff
+}
+
+.dropdown-divider {
+  background-color: #dbdbdb;
+  border: 0;
+  display: block;
+  height: 1px;
+  margin: .5rem 0
+}
+.button,
+.control.has-icons-left .icon,
+.control.has-icons-right .icon,
+.input,
+.select,
+.select select,
+.textarea {
+  height: 2.5em
+}
+.box,
+.button {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+
+.button {
+  border-radius: 3px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),
+  background-color 300ms ease;
+  position: relative;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
+}
+
+.button.is-hovered,
+.button:hover {
+  background-color: #f2f2f2
+}
+
+.button.is-active,
+.button:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2),
+  0 8px 10px 1px rgba(0, 0, 0, .14),
+  0 3px 14px 2px rgba(0, 0, 0, .12)
+}
+
+.button.is-success.is-hovered,
+.button.is-success:hover {
+  background-color: #449d48
+}
+
+.button.is-success.is-active,
+.button.is-success:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)
+}
+
+.button.is-warning.is-hovered,
+.button.is-warning:hover {
+  background-color: #ffe822
+}
+
+.button.is-warning.is-active,
+.button.is-warning:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)
+}
+
+.button.is-danger.is-hovered,
+.button.is-danger:hover {
+  background-color: #f32c1e
+}
+
+.button.is-danger.is-active,
+.button.is-danger:active {
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)
+}
+
+
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transform: scale(10, 10);
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform .5s, opacity 1s;
+  transition: transform .5s, opacity 1s, -webkit-transform .5s
+}
+
+.button:active:before {
+  -webkit-transform: scale(0, 0);
+  transform: scale(0, 0);
+  opacity: .2;
+  transition: 0s
+}
+
+
+
+.input.is-small {
+  border-radius: 0
+}
+
+.input.is-active,
+.input.is-focused,
+.input:active,
+.input:focus {
+  box-shadow: inset 0 -2px 0 #51CBEE
+}
+
+
+
+.select select.is-active,
+.select select.is-focused,
+.select select:active,
+.select select:focus {
+  box-shadow: inset 0 -2px 0 #51CBEE
+}
+
+
+.input.is-success {
+  box-shadow: inset 0 -1px 0 #00E676
+}
+
+.input.is-success.is-active,
+.input.is-success.is-focused,
+.input.is-success:active,
+.input.is-success:focus {
+  box-shadow: inset 0 -2px 0 #00E676
+}
+
+.input.is-warning {
+  box-shadow: inset 0 -1px 0 #ffeb3b
+}
+
+.input.is-warning.is-active,
+.input.is-warning.is-focused,
+.input.is-warning:active,
+.input.is-warning:focus {
+  box-shadow: inset 0 -2px 0 #ffeb3b
+}
+
+.input.is-danger {
+  box-shadow: inset 0 -1px 0 #F44336
+}
+
+.input.is-danger.is-active,
+.input.is-danger.is-focused,
+.input.is-danger:active,
+.input.is-danger:focus {
+  box-shadow: inset 0 -2px 0 #F44336
+}
+
+.input.is-disabled,
+.input[disabled],
+.input[readonly] {
+  border-bottom: 1px dotted #dbdbdb;
+  cursor: not-allowed
+}
+
+.control.has-addons .button,
+.textarea {
+  box-shadow: none
+}
+
+.select select {
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 -1px 0 #dbdbdb;
+  transition: all 300ms
+}
+
+.control.has-addons .button:first-child,
+.control.has-addons .button:first-child select,
+.control.has-addons .button:last-child,
+.control.has-addons .button:last-child select,
+.control.has-addons .input:first-child,
+.control.has-addons .input:first-child select,
+.control.has-addons .input:last-child,
+.control.has-addons .input:last-child select,
+.control.has-addons .select:first-child,
+.control.has-addons .select:first-child select,
+.control.has-addons .select:last-child,
+.control.has-addons .select:last-child select {
+  border-radius: 0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="time"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="tel"],
+input[type="number"],
+textarea.input {
+  background-color: transparent;
+  border: none;
+  border-bottom-width: medium;
+  border-bottom-style: none;
+  border-bottom-color: currentcolor;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  height: 3rem;
+  width: 100%;
+  margin: 0 0 20px 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="time"]:focus,
+input[type="date"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+textarea.input:focus {
+  border-bottom: 1px solid #26a69a;
+  -webkit-box-shadow: 0 1px 0 0 #26a69a;
+  box-shadow: 0 1px 0 0 #26a69a;
+}

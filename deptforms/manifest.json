@@ -1,0 +1,43 @@
+{
+  "name": "University of Delaware Department Forms",
+  "version": "1.0.0",
+  "short_name": "UD Department Forms",
+  "author": "Christopher Leonard UD IT-CSS",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "description": "UD static based forms"
+  "start_url": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "sidebar_action": {
+    "default_icon": {
+        "180": "//www.udel.edu/deptforms/img/touch/apple-icon-180x180.png"
+    },
+    "default_title": "My sidebar",
+    "default_panel": "//www.udel.edu/deptforms/include/udtbp_footer.html"
+  },
+  "background": {
+    "scripts": [
+        "//www.udel.edu/deptforms/js/libs/jquery/jquery.min.js",
+        "//www.udel.edu/deptforms/js/jquery.validate.min.js",
+        "//www.udel.edu/deptforms/js/additional-methods.min.js"
+    ]
+  },
+  "icons": [
+    {
+      "src": "//www.udel.edu/deptforms/img/touch/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "//www.udel.edu/deptforms/img/touch/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "//www.udel.edu/deptforms/img/touch/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+}

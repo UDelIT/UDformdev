@@ -1,0 +1,74 @@
+/**
+* @PRINT CSS
+*
+* Print styles.
+*  Inlined to avoid the additional HTTP request:
+*  http://www.phpied.com/delay-loading-your-print-css/
+*
+* @version      1.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @license      MIT License
+* @see          https://github.com/h5bp/html5-boilerplate/commit/dbc3ed973573a77122f6b8a2aebd0a76a44ad6a6
+*/
+/*-------------------------------------------------------------------
+  9. @MEDIA QUERIES
+    a. Black prints faster: http://www.sanbeiji.com/archives/953
+    b. Don't show links that are fragment identifiers, or use the `javascript:`
+       pseudo protocol
+    c. Printing Tables: http://css-discuss.incutio.com/wiki/Printing_Tables
+-------------------------------------------------------------------*/
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important; /* a */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; /* b */
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group; /* c */
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+@media print and (color) {
+ * {
+  -webkit-print-color-adjust:exact;
+  print-color-adjust:exact
+ }
+}

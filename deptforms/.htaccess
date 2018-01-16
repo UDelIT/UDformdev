@@ -1,0 +1,23 @@
+ RedirectMatch 403 ^/deptforms/$
+# <IfModule mod_mime.c>
+
+  # Data interchange
+
+    #cAddType application/atom+xml                        atom
+    #cAddType application/json                            json map topojson
+    # AddType application/ld+json                         jsonld
+
+
+  # JavaScript
+
+    # Normalize to standard type.
+    # https://tools.ietf.org/html/rfc4329#section-7.2
+
+    # AddType application/javascript                      js
+
+
+  # Manifest files
+
+    # AddType application/manifest+json                   webmanifest
+# AddType application/x-web-app-manifest+json webapp
+# </IfModule>

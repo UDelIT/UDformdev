@@ -1,0 +1,270 @@
+/**
+* @UD BRANDING CSS
+*
+* Defines all of the OCM approved structural and layout branding styles for
+* page header and footer used on www.udel.edu static web sites.
+*
+* This file loads on all devices and platforms.
+*
+*
+* @version      3.0.5
+* @since        2.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @license      MIT License
+* @see          https://philipwalton.github.io/solved-by-flexbox/demos/grids/
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+  1. @HEADER ELEMENTS
+  2. @FOOTER ELEMENTS
+  3. @MEDIA QUERIES - HEADER
+  4. @MEDIA QUERIES - FOOTER
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  1. @HEADER ELEMENTS
+    a. safari fix for font weight
+       https://stackoverflow.com/questions/21278020/font-weight-turns-lighter-on-mac-safari
+-------------------------------------------------------------------*/
+#udtbp_header span {
+  display: block;
+  margin: 10px 0
+}
+#udtbp_header {
+  background-color: #0048A5;
+  background-image: url("../img/logos/ud-seal-cpa.png");
+  background-position: center 0;
+  background-repeat: no-repeat;
+/*  -webkit-background-size: contain;
+  background-size: contain;*/
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  border-bottom: 3px solid #FFD300;
+  transition: height 0.3s ease-in 0s;
+  height: 141px;
+}
+#udtbp_logo a:hover {
+  text-decoration: none
+}
+#udtbp_header > div {
+  text-align: center;
+}
+#udtbp_header span a {
+  font-family: "Open Sans",sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: subpixel-antialiased; /* a  */
+  -webkit-text-stroke:1px transparent;
+  padding-bottom: 0;
+  color: #FFF;
+  text-decoration: none;
+  border-bottom: none;
+}
+#udtbp_logo {
+  display: flex;
+  font-size:.1rem;
+  color:#FFF;
+  overflow:visible;
+  border-bottom:none;
+  justify-content: center;
+  margin: 10px 0
+}
+/*------------------------------------------------------------------
+  2. @FOOTER ELEMENTS
+-------------------------------------------------------------------*/
+.ud_circle_logo {
+  padding-left:13px;
+}
+.ud_ft_social {
+  padding-right: 13px;
+}
+#udtbp_footer {
+ border-top: 3px solid #FFD300;
+ padding: .875em 0 0;
+ margin-top:1.4em;
+}
+#udtbp_footer ul {
+  list-style: none;
+  list-style-image: none;
+  text-align: right;
+}
+#udtbp_ftlogo > a {
+  padding-right:0;
+  position: relative;
+  top: -33px;
+  z-index: 1;
+}
+#udtbp_ftlogo > a,
+#udtbp_ftlogo > a:hover {
+  border: medium none;
+  display: block;
+  max-width: 370px;
+}
+#udtbp_ftlogo img {
+  margin: 0 !important;
+}
+#udtbp_footer_legal {
+  background: #EEE;
+  display: flex;
+  height: 32px;
+  width: 100%;
+}
+
+#udtbp_footer_legal > ul {
+  margin: 0 auto;
+}
+#udtbp_footer_legal li {
+  font-family: 'Arial', sans-serif;
+  font-weight: 400;
+  font-size:10px !important;
+  display: inline-block;
+  list-style: none inside none !important;
+  padding:.5em .625em .625em 0;
+  line-height: 2
+}
+#udtbp_footer_legal li:first-child {
+  color:#000
+}
+#udtbp_footer_legal a {
+  border-bottom: none;
+  text-decoration: underline;
+  color:#2F6FA7
+}
+#udtbp_sociallinks{
+  margin-top: .813em;
+}
+#udtbp_sociallinks ul {
+  padding: 0;
+  margin: 0;
+}
+#udtbp_sociallinks li {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+}
+#udtbp_sociallinks a {
+  display: block;
+  text-decoration: none;
+  border-bottom: none;
+}
+span[data-icon="twitter"]:after,
+span[data-icon="facebook"]:after,
+span[data-icon="instagram"]:after,
+span[data-icon="youtube"]:after,
+span[data-icon="pintrest"]:after,
+span[data-icon="linkedin"]:after{
+  display:block;
+  content:'';
+  background-color:transparent;
+  width: 44px;
+  height: 44px;
+  background-size: 75% auto !important;
+  margin:0 auto;
+}
+span[data-icon="twitter"]:after {
+  background-position: center 6px !important;
+}
+span[data-icon="facebook"]:after {
+  background-position: center -26px !important;
+}
+span[data-icon="instagram"]:after {
+  background-position: center -59px !important;
+}
+span[data-icon="youtube"]:after {
+  background-position: center -93px !important;
+}
+span[data-icon="pintrest"]:after {
+  background-position: center -126px !important;
+}
+span[data-icon="linkedin"]:after {
+  background-position: center -159px !important;
+}
+/*------------------------------------------------------------------
+  * 3. @MEDIA QUERIES - HEADER
+  *   min: 61.250em / 980px
+  *   min: 20.000em / 320px
+  *   max: 61.188em / 979px
+  *   min: 48.938em / 734px
+  *   max: 61.188em / 979px
+  *   min: 48.938em / 734px
+  *   min: 61.250em / 980px
+-------------------------------------------------------------------*/
+@media only screen and (min-width: 61.250em) {
+  #udtbp_logo img {
+    border: 0 none;
+    padding: 0;
+    background: none;
+    color: #111;
+    width:218px;
+    height:91px;
+    transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+  }
+}
+@media only screen and (min-width: 20em) and (max-width: 61.188em) {
+  #udtbp_header,
+  #udtbp_header > div {
+    height: auto;
+  }
+  #udtbp_logo img {
+    display:inline-flex;
+    margin:0 auto;
+    width: 155px;
+    height:64.7px;
+    transition: width 0.3s ease 0s, height 0.3s ease 0s, transform 0.3s ease 0s;
+  }
+}
+@media only screen and (min-width: 48.938em) and (max-width: 61.188em) {
+  #udtbp_header {
+    background-size: 65% auto;
+  }
+}
+@media only screen and (max-width: 767px) {
+  #udtbp_header {
+    background-size: 100% auto;
+    transition: background-size 0.3s ease-in 0s;
+  }
+}
+@media screen and (min-width: 48.938em) {
+  #udtbp_header span a {
+    font-size: 2vw;
+  }
+}
+@media screen and (min-width: 61.250em) {
+  #udtbp_header span a {
+    font-size: 1.25em;
+  }
+}
+
+
+
+/*------------------------------------------------------------------
+  3. @MEDIA QUERIES - FOOTER
+-------------------------------------------------------------------*/
+@media only screen and (max-width:47.938em){
+  #udtbp_sociallinks ul {
+    text-align: center;
+  }
+  .ud_circle_logo {
+    padding-left:0;
+    max-height:115px;
+  }
+  #udtbp_footer .ud_circle_logo,
+  #udtbp_footer .ud_ft_social {
+
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+  }
+  .ud_ft_social {
+    padding-right: 0;
+  }
+}
+@media only screen and (min-width:48.000em){
+  #udtbp_footer .ud_circle_logo,
+  #udtbp_footer .ud_ft_social {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+  }
+}

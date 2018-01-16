@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+    	<tile>
+    		<square70x70logo src="//www.udel.edu/deptforms/img/touch/smalltile.png"/>
+    		<square150x150logo src="//www.udel.edu/deptforms/img/touch/mediumtile.png"/>
+    		<wide310x150logo src="//www.udel.edu/deptforms/img/touch/widetile.png"/>
+    		<square310x310logo src="//www.udel.edu/deptforms/img/touch/largetile.png"/>
+    		<TileColor>#2D89EF</TileColor>
+    	</tile>
+    	<notification>
+    		<polling-uri  src="//www.udel.edu/deptforms/notifications/test.xml"/>
+    		<frequency>30</frequency>
+    		<cycle>1</cycle>
+    	</notification>
+    </msapplication>
+</browserconfig>

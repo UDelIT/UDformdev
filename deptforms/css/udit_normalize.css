@@ -1,0 +1,629 @@
+/**
+* @NORMALIZE CSS
+*
+* Defines all of the basic reset styles used in public facing pages.
+* Based off normalize.css v7.0.0 by Nicolas Gallagher
+*
+* This file is minified and added to style.min.css in production.
+*
+* @version      2.0.0
+* @since        1.0.0
+* @author       Christopher Leonard - University of Delaware | IT CS&S
+* @author       Nicolas Gallagher
+* @link         https://github.com/necolas/normalize.css
+* @license      MIT License
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+   1. @ROOT
+   2. @SECTIONS
+   3. @GROUPING CONTENT
+   4. @TEXT-LEVEL SEMANTICS
+   5. @EMBEDDED CONTENT
+   6. @TABLES
+   7. @SCREEN READERS
+   8. @MEDIA QUERIES
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+  1. @ROOT
+    a. Correct the line height in all browsers.
+    b. Prevent adjustments of font size after orientation changes in
+       IE on Windows Phone and in iOS.
+-------------------------------------------------------------------*/
+:root {
+  /* font-size: calc(14px + .4vw); */ /* a */
+  font-size: calc(1rem + ((1vw - 0.3rem) * 1.1111));
+  /* Where: * 1.1111 = 100 * font_Size_Difference / viewport_Width_Difference
+
+  1.1111 = 100 * 15px /4.5714vw
+
+  15 = 65px - 50px input field height
+  */
+ --x-height-multiplier: 0;
+    --baseline-multiplier: 0;
+  --system-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; /* a */
+}
+:-moz-any(article, aside, nav, section) h1{
+  font-size: 2em;
+}
+
+/*
+h1 {
+  font-size: 36px;
+  line-height: 1.16666666666;
+  margin-bottom: 30px;
+}
+
+/*
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  padding-top: 24px;
+  margin-bottom: 12px;
+}
+
+
+h3 {
+  font-size: 24px;
+  line-height: 1.25;
+  padding-top: 12px;
+  margin-bottom: 6px;
+}
+
+
+h4 {
+  font-size: 21px;
+  line-height: 1.3333333;
+  padding-top: 12px;
+  margin-bottom: 8px;
+}
+
+
+h5 {
+  font-size: 18px;
+  line-height: 1.5;
+  padding-top: 12px;
+  margin-bottom: 9px;
+}
+
+
+h6 {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-top: 9px;
+  margin-bottom: 3px;
+} */
+
+p {
+  margin-bottom: 12px;
+}
+
+h1, h2, h3, h4, h5, h6,
+p {
+  margin-top: 0;
+}
+html{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering:auto;
+  line-height: 1.15; /* a */
+  -webkit-text-size-adjust:100%; /* b */
+  -ms-text-size-adjust:100%; /* b */
+}
+html,
+body {
+  height: 100%;
+}
+/* @font-face {
+  font-family: 'open_sans_regular';
+  src: url('/fonts/OpenSans-Regular.eot');
+  src: url('/fonts/OpenSans-Regular.eot') format('embedded-opentype'),
+  url('/fonts/OpenSans-Regular.woff') format('woff'),
+  url('/fonts/OpenSans-Regular.ttf') format('truetype'),
+  url('/fonts/OpenSans-Regular.svg#open_sanscondensed_light') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'open_sanscondensed_light';
+  src: url('/fonts/OpenSans-CondLight-webfont.eot');
+  src: url('/fonts/OpenSans-CondLight-webfont.eot') format('embedded-opentype'),
+  url('/fonts/OpenSans-CondLight-webfont.woff') format('woff'),
+  url('/fonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
+  url('/fonts/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+  font-weight: normal;
+  font-style: normal
+}
+@font-face {
+  font-family: 'open_sans_condensedbold';
+  src: url('/fonts/OpenSans-CondBold-webfont.eot');
+  src: url('/fonts/OpenSans-CondBold-webfont.eot') format('embedded-opentype'),
+  url('/fonts/OpenSans-CondBold-webfont.woff') format('woff'),
+  url('/fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+  url('/fonts/OpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
+  font-weight: normal;
+  font-style: normal
+} */
+/* COMBINING FONTS
+   https://jakearchibald.com/2017/combining-fonts/
+*/
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Yantramanav Regular'), local('Yantramanav-Regular'), local('OpenSans'),local('Open-Sans'),
+       url('../fonts/yantramanav-regular.woff2') format('woff2'),
+       url('../fonts/yantramanav-regular.woff') format('woff'),
+       url('../fonts/yantramanav-regular.ttf') format('truetype');
+unicode-range: U+0020-007D, U+00A9, U+00AB, U+00BB, U+00B7;
+}
+@font-face {
+  font-family: 'Yantramanav';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Yantramanav Bold'), local('Yantramanav-Bold'),
+       url('../fonts/yantramanav-bold.woff2') format('woff2'),
+       url('../fonts/yantramanav-bold.woff') format('woff'),
+       url('../fonts/yantramanav-bold.ttf') format('truetype');
+  unicode-range: U+0020-007D; /* all letters and english related unicode-table.com */
+}
+
+html,
+body,
+button,
+p,
+ol,
+ul,
+li,
+fieldset,
+legend,
+input,
+select,
+textarea,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+html,
+input,
+label,
+textarea {
+  box-sizing: border-box
+}
+/*-------------------------------------------------------------------
+  2. @SECTIONS
+    a. System fonts used by Medium and WordPress
+    b. Correct the font size and margin on 'h1' elements within 'section' and
+       'article' contexts in Chrome, Firefox, and Safari.
+-------------------------------------------------------------------*/
+body {
+  position:relative;
+  font-family: var(--system-font);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings:"liga" on;
+  font-variant-ligatures: common-ligatures;
+  color: #565656;
+  /* line-height: 1.42857143; */
+  padding: 0;
+  border: 0 none
+/*   font-size: calc(16px + 0.5vw);
+  line-height: calc(1.1em + 0.5vw); */
+  margin: .5em;
+  font-weight: 400;
+/*   letter-spacing: -.022em; */
+}
+/* body {
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -.022em;
+  color: #333;
+} */
+body,input,textarea,select,button {
+ font-synthesis:none;
+ -moz-font-feature-settings:'kern';
+ -webkit-font-smoothing:antialiased;
+ -moz-osx-font-smoothing:grayscale;
+ direction:ltr;
+ text-align:left
+}
+/* h1 {
+  font-size: calc(20px + 1.5vw);
+}
+
+h2 {
+  font-size: 1.2em;
+} */
+
+h1, h2 {
+  font-weight: bold;
+}
+
+h1, h2, p {
+  margin: .5em 0;
+}
+
+
+h1.title + h2.subtitle {
+  font-weight:  normal;
+  font-size: 1.15em;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  /* font-family: "Yantramanav";
+  src: local('Roboto'), local('OpenSans'),local('Open-Sans');
+  unicode-range: U+2500-259F */
+  margin: 0;
+  padding: 0;
+  color: #3D464D;
+}
+/* h1 {
+  font-size: 22px;
+}
+@media (min-width: 576px) {
+  h1 {
+    font-size: calc(1.04166667vw + 16px);
+  }
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: calc(4.46428571vw - 10.28571429px);
+  }
+}
+@media (min-width: 992px) {
+  h1 {
+    font-size: 34px;
+  }
+} */
+
+/*-------------------------------------------------------------------
+  3. @GROUPING CONTENT
+    a. Add the correct box sizing in Firefox.
+    b. Show the overflow in Edge and IE.
+-------------------------------------------------------------------*/
+hr {
+  box-sizing: content-box; /* a */
+  height: 0; /* a */
+  overflow: visible; /* b */
+}
+p+* {
+  margin-top: 1.05rem
+}
+main {
+  position: relative;
+  margin: 0 auto;
+}
+p {
+    margin: 0 0 10px
+}
+p a{
+  line-height:inherit
+}
+/* li,
+p,
+ul {
+    margin: 0;
+    padding: 0
+} */
+ol,
+ul {
+  list-style:none;
+  list-style-image:none;
+  list-style-position: outside;
+  margin-top: 0;
+  margin-bottom: 10px
+}
+/*-------------------------------------------------------------------
+  4. @TEXT-LEVEL SEMANTICS
+    a. Remove gaps in links underline in iOS 8+ and Safari 8+.
+    b. Prevent the duplicate application of `bolder` by the next rule in
+       Safari 6.
+    c. Add the correct font weight in Chrome, Edge, and Safari.
+    d. Add the correct font size in all browsers.
+    e. Prevent `sub` and `sup` elements from affecting the line height in
+       all browsers.
+-------------------------------------------------------------------*/
+a {
+  -webkit-text-decoration-skip: objects; /* a */
+  color: #337AB7;
+  -webkit-transition: color .12s ease-in-out;
+  transition: color .12s ease-in-out;
+  border-bottom: 1px dotted rgba(26, 67, 106, .37);
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  outline-width: 0
+}
+a:focus,
+a:hover {
+  color: #23527C;
+}
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px
+}
+a:visited {
+  color: #2B689C;
+}
+:focus {
+ outline:3px solid #c1e0fe;
+ outline:3px solid rgba(131,192,253,0.5);
+ outline-offset:1px
+}
+:focus[data-focus-method="mouse"]:not(input):not(textarea):not(select),
+:focus[data-focus-method="touch"]:not(input):not(textarea):not(select) {
+  outline:none
+}
+::-moz-focus-inner {
+ border:0;
+ padding:0
+}
+a:active,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+ text-decoration:underline
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 1px dotted #337AB7
+}
+b,
+strong {
+  font-weight: inherit /* b */
+}
+b,
+strong {
+  font-weight: bolder /* c */
+}
+small {
+  font-size: 80% !important /* d */
+}
+label + small {
+  margin-top: -20px !important;
+  display: inline-block;
+  color: #333;
+}
+label + sup {
+  display:  inline-block;
+}
+sup {
+ font-size:.6em;
+ vertical-align:top;
+ position:relative;
+ bottom:-.2em;
+ color: #F44336;
+}
+
+/* sup {
+  color: #F44336;
+  font-weight: bold;
+  font-size:200%;
+  vertical-align: sub
+}
+ sup {
+  font-size: 75%;
+  line-height: 0; / e /
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em
+} */
+/*-------------------------------------------------------------------
+  5. @EMBEDDED CONTENT
+-------------------------------------------------------------------*/
+img {
+  max-width:100%;
+}
+svg {
+  max-height: 100%;
+}
+/*-------------------------------------------------------------------
+  6. @TABLES
+-------------------------------------------------------------------*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table td,
+table th {
+  text-align: left;
+  vertical-align: top;
+}
+table th {
+  color: #363636;
+}
+td,
+th {
+  padding: 0;
+  text-align: left;
+}
+/*-------------------------------------------------------------------
+  7. @SCREEN READERS
+    a. Hide visually and from screen readers.
+    b. Hide only visually, but have it available for screen readers:
+       https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+
+    c. For long content, line feeds are not interpreted as spaces and small
+       width causes content to wrap 1 word per line:
+       https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+    d. Extends the .visuallyhidden class to allow the element to be focusable
+       when navigated to via the keyboard: https://www.drupal.org/node/897638
+    e. Hide visually and from screen readers, but maintain layout
+    f. Fix for screen readers interpreting white-space property forcing the
+       content to render on one line.
+       https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+-------------------------------------------------------------------*/
+.hidden {
+  display: none !important; /* a */
+}
+.visuallyhidden { /* b */
+  border: 0;
+  /* clip: rect(0 0 0 0);
+  clip-path: inset(50%); */
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* c */
+   clip:rect(1px 1px 1px 1px);
+   clip:rect(1px, 1px, 1px, 1px);
+   -webkit-clip-path:inset(0px 0px 99.9% 99.9%);
+   clip-path:inset(0px 0px 99.9% 99.9%);
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus { /* d */
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+.invisible {
+  visibility: hidden; /* e */
+}
+#skiplinks {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  text-shadow: none;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: normal;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  -webkit-font-smoothing: subpixel-antialiased;
+  white-space: nowrap; /* f */
+}
+/* #skiplinks {
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  left: 0px;
+  color: #fff;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  border-bottom-right-radius: 8px;
+  background: transparent;
+  -webkit-transition: top 1s ease-out, background 1s linear;
+  transition: top 1s ease-out, background 1s linear;
+  z-index: 100;
+} */
+
+#skiplinks a,
+#skiplinks a:focus,
+#skiplinks a:hover,
+#skiplinks a:visited {
+  position: absolute !important;
+  left: -999em;
+}
+[aria-required=true] {
+  /* border: red thin solid; */
+}
+[data-required=true]:after {
+  content: url('/iconStar.gif');
+}
+/*-------------------------------------------------------------------
+  8. @MEDIA QUERIES
+    a. https://codepen.io/AmeliaBR/pen/RNXeyd
+-------------------------------------------------------------------*/
+/* 1rem(16px) @ 30rem(480px) increasing to 2rem(32px) @ 120rem(1920px)
+https://websemantics.uk/tools/responsive-font-calculator/
+*/
+@media (min-width: 30rem) {
+  :root {
+    /* font-size: calc(14px + .4vw); */ /* a */
+    /* font-size: calc(1rem + ((1vw - 0.3rem) * 1.1111));  */
+    /* Where: * 1.1111 = 100 * font_Size_Difference / viewport_Width_Difference
+                         100 *            16            / 1440
+
+    */
+  }
+}
+/* Prevent font scaling beyond this breakpoint */
+@media (min-width: 120rem) {
+  :root {
+    font-size: 2rem;
+  }
+}
+/**
+ * https://codepen.io/indrekpaas/pen/VarLaJ
+ * 1. Apply rule to all browsers
+ * 2. Override WebKit browsers, because Safari needs percentages to work
+ * 3. Override IE/Edge, because Edge applies previous -webkit-calc() and
+ *    won't work with percentages
+ */
+@media screen and (min-width: 80em) {
+  /* html {
+    font-size: calc(0.875em + 0.25 * (100vw - 80em) / 40);
+    font-size: -webkit-calc(87.5% + 0.25 * (100vw - 8000%) / 40);
+    font-size: -ms-calc(0.875em + 0.25 * (100vw - 80em) / 40);
+  } */
+}
+@media (-webkit-min-device-pixel-ratio:1.5),
+(min-resolution:1.5dppx),
+(min-resolution:144dpi) {
+  html {
+    font-weight: 300
+  }
+}
+
+@media only screen and (inverted-colors) {
+ .no-inversion {
+  -webkit-filter:invert(1);
+  filter:invert(1)
+ }
+}
+
+
+@media screen and (max-device-width:1000px) {
+ html {
+  -webkit-text-size-adjust:none
+ }
+}
+
+
+
+input,
+select,
+textarea {
+  -webkit-transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+  transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+
+}
+legend {
+  background:#00539F;
+  color:#FFF;
+  border:1px solid #01456B;
+  font-size:1.3rem;
+  font-weight:400;
+  padding:.313em;
+}
