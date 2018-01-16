@@ -1,0 +1,65 @@
+/*-------------------------------------------------------------------
+  8. @UD HELPER CLASSES
+-------------------------------------------------------------------*/
+.udit_inline_block {
+  display: inline-block !important
+}
+.udit_inline {
+  display: inline !important
+}
+.udit_text_left {
+  text-align:left !important
+}
+.udit_text_center {
+  text-align:center !important
+}
+.udit_text_right {
+  text-align:right !important
+}
+.udit_text_justify {
+  text-align:justify !important
+}
+.udit_block {
+  display: block !important
+}
+.udit_none {
+  display: none !important
+}
+.udit_table {
+ display:table !important
+}
+.udit_table_cell {
+ display:table-cell !important
+}
+.udit_table_row {
+ display:table-row !important
+}
+.udit_text_break {
+ word-wrap:break-word !important
+}
+
+.udit_text_kern {
+ -webkit-font-feature-settings:"kern" 1,"kern";
+ -moz-font-feature-settings:"kern" 1,"kern";
+ font-feature-settings:kern\ 1,kern;
+ -webkit-font-kerning:normal;
+ -moz-font-kerning:normal;
+ font-kerning:normal;
+ text-rendering:optimizeLegibility
+}
+.udit_text_nowrap,
+.udit_text_truncate {
+ white-space:nowrap!important
+}
+.udit_text_truncate {
+ max-width:100%;
+ overflow:hidden!important;
+ text-overflow:ellipsis!important;
+ word-wrap:normal!important
+}
+.udit_float_left {
+  float: left !important;
+}
+.udit_float_right {
+  float: right !important;
+}
